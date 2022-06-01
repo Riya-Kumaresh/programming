@@ -1,0 +1,41 @@
+// LogarithmicSolution
+#include <stdio.h>
+int logarthmicFunc( int n)
+{
+        return floor(log10(n)+1);
+}
+int main() {
+    int n=166;
+    printf("%d",logarthmicFunc(n));
+}
+//iterative Solution
+#include <stdio.h>
+int iterativeSolution( int n)
+{
+   int flag=0;
+   while(n!=0)
+   {
+       n=n/10;
+       ++flag;
+   }
+   return flag;
+}
+int main() {
+    int n=166;
+    printf("%d",iterativeSolution(n));
+}
+//recursive Solution
+
+#include <stdio.h>
+int recursiveSolution( int n)
+{
+   if(n==0)
+   {
+    return 0;
+   }
+  return 1+recursiveSolution(n/10);
+}
+int main() {
+    int n=1664;
+    printf("%d",recursiveSolution(n));
+}
